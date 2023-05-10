@@ -1,4 +1,4 @@
-from flask import Flask,render_template
+from flask import Flask,render_template,request
 
 app = Flask(__name__,template_folder='templates')
 
@@ -17,6 +17,10 @@ def sample():
 @app.route('/contact')
 def contact():
     return render_template('contact.html')
+@app.route('/edit',methods=["GET","POST"])
+def edit():
+    if request.method == "POST":
+        return "POST request is successful"
 
 
 if __name__ == '__main__':

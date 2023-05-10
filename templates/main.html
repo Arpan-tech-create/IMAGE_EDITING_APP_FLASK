@@ -42,11 +42,26 @@
         </div>  
       </nav>
       <div class="container">
+
+        <form action="/edit" method="post" enctype="multipart/form-data">
         <div class="mb-3">
           <label for="formFile" class="form-label">file input</label>
           <input class="form-control" type="file" id="formFile">
         </div>
-  
+        <div class="form-floating">
+          <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+            <option selected>Open this select menu</option>
+            <option value="cpng">Convert TO PNG</option>
+            <option value="cgray">Convert To GrayScale</option>
+            <option value="cwebp">Convert To Webp</option>
+            <option value="cjpg">Convert To jpg</option>
+          </select>
+          <label for="floatingSelect">Select An Operations</label>
+        </div>  
+        <div class="mb-3">
+        <button type="submit" class="btn btn-success">Success</button>
+      </form>
       </div>
+      </div>      
   </body>
 </html>
